@@ -28,13 +28,14 @@ const Header = () => {
   const [bgIsActive, setBgIsActive] = useState(false);
   const [menuIsActive, setMenuIsActive] = useState(false);
 
-  const hasScrolled = useScrolled({ amount: 100 });
+  const hasScrolled = useScrolled({ amount: 500 });
   const scrollDirection = useScrollDirection();
 
   useEffect(() => {
     if (!hasScrolled) {
       setMenuIsActive(false);
       setBgIsActive(false);
+      return;
     }
 
     if (hasScrolled && scrollDirection === "up") {
@@ -64,7 +65,7 @@ const Header = () => {
       <div className="relative z-20">
         <PageLayout>
           <div className="flex justify-between">
-            <Logo />
+            <Logo isActive={hasScrolled} />
             <div className="flex items-center gap-4">
               <MenuLinks isActive={menuIsActive} />
               <LoginButton />

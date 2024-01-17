@@ -85,6 +85,9 @@
     --system-accent: #ff6b00;
     --system-light: #FCFCFC;
 
+    --system-primary-font: "twkLausanne450";
+    --system-secondary-font: "gtAplinaStandardLightItalic";
+
     --white-background: #ffffff;
     --white-foreground: #121212;
     --white-secondary: #9f9f9f;
@@ -180,6 +183,11 @@
     --lilac-muted: #e9e1e8;
     --lilac-card: #f5efd8;
     --lilac-border: #f5efd8;
+  }
+
+  html,
+  body {
+    background: var(--system-foreground);
   }
 
   .header-bg {

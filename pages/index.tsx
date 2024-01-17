@@ -6,6 +6,7 @@ import MediaKitEdit from "@/components/blocks/MediaKitEdit";
 import MediaKitReveal from "@/components/blocks/MediaKitReveal";
 import MediakitInsights from "@/components/blocks/MediakitInsights";
 import Steps from "@/components/blocks/Steps";
+import { NextSeo } from "next-seo";
 
 type Props = {
   data: {};
@@ -16,6 +17,7 @@ const Page = (props: Props) => {
 
   return (
     <>
+      <NextSeo title="Ezra Kits - Landing" description="TBC" />
       <Header />
       <main className="bg-system-light min-h-[300vh]">
         <Hero />
