@@ -39,6 +39,7 @@ module.exports = {
         "system-icon": "var(--system-icon)",
         "system-input": "var(--system-input)",
         "system-accent": "var(--system-accent)",
+        "system-light": "var(--system-light)",
   
         "white-foreground": "var(--white-foreground)",
         "white-background": "var(--white-background)",

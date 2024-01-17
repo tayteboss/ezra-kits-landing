@@ -83,6 +83,7 @@
     --system-icon: hsl(240, 5%, 65%);
     --system-input: #f0f0f0;
     --system-accent: #ff6b00;
+    --system-light: #FCFCFC;
 
     --white-background: #ffffff;
     --white-foreground: #121212;
@@ -179,6 +180,10 @@
     --lilac-muted: #e9e1e8;
     --lilac-card: #f5efd8;
     --lilac-border: #f5efd8;
+  }
+
+  .header-bg {
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
   }
 
   .primary-font {
