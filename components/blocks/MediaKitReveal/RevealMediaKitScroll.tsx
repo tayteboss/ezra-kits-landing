@@ -46,7 +46,7 @@ const RevealMediaKitScroll = (props) => {
 
   return (
     <motion.div
-      className="performance relative flex h-full flex-1 items-center justify-center overflow-hidden border-r border-system-foreground p-10"
+      className="performance relative flex h-full w-full flex-1 items-center justify-center overflow-hidden border-r border-system-foreground lg:w-[50%]"
       style={{ background }}
     >
       <div className="mx-auto flex w-[150px] items-center justify-center lg:w-[250px]">

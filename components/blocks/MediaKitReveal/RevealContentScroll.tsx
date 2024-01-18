@@ -77,7 +77,7 @@ const RevealContentScroll = (props) => {
   );
 
   return (
-    <div className="sticky top-0 flex h-[100vh] flex-1 items-center justify-center">
+    <div className="sticky top-0 flex h-[100vh] w-full flex-1 items-center justify-center lg:w-[50%]">
       <div>
         <p className="flex gap-2 text-[30px] leading-[1.2] lg:gap-3 lg:text-[50px]">
           <span>Making a</span>

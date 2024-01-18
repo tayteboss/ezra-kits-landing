@@ -185,6 +185,15 @@
     --lilac-border: #f5efd8;
   }
 
+  .view-element-fade-in {
+    opacity: 0;
+    transition: opacity 500ms ease;
+  }
+
+  .view-element-fade-in--in-view {
+    opacity: 1;
+  }
+
   .media-kit-gradient {
     background: linear-gradient(180deg, rgba(252, 252, 252, 0.00) 0%, #FCFCFC 49.5%);
   }

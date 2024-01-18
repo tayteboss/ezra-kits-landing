@@ -3,6 +3,7 @@ import ColourPicker from "../ColourPicker";
 import FontPicker from "../FontPicker";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const wrapperVariants = {
   hidden: {
@@ -38,8 +39,19 @@ const MediaKitCanvas = () => {
     }
   }, [activeFontStyle]);
 
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+    rootMargin: "-50px",
+  });
+
   return (
-    <div className="mb-12 md:mb-0">
+    <div
+      className={`view-element-fade-in mb-12 md:mb-0 ${
+        inView ? "view-element-fade-in--in-view" : ""
+      }`}
+      ref={ref}
+    >
       <div className="mb-16 flex flex-col items-center justify-center gap-5 md:mb-20 md:flex-row md:items-stretch md:gap-16">
         <ColourPicker
           activeColour={activeColour}
