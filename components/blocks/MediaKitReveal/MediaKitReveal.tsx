@@ -11,7 +11,7 @@ const MediaKitReveal = () => {
   const distanceToTop = useDistanceToTop(ref);
 
   return (
-    <div className="relative border-b border-system-foreground">
+    <section className="relative border-b border-system-foreground">
       <div className="relative h-[900vh]">
         <div
           ref={ref}
@@ -27,7 +27,7 @@ const MediaKitReveal = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
