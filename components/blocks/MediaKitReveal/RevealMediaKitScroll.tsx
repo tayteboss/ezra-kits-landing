@@ -1,13 +1,7 @@
-import { useRef } from "react";
-import useDistanceToTop from "@/hooks/useDistanceToTop";
-import useWindowHeight from "@/hooks/useWindowHeight";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const RevealMediaKitScroll = () => {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const windowHeight = useWindowHeight();
-  const distanceToTop = useDistanceToTop(ref);
+const RevealMediaKitScroll = (props) => {
+  const { windowHeight, distanceToTop } = props;
 
   const { scrollY } = useScroll();
 
@@ -52,11 +46,10 @@ const RevealMediaKitScroll = () => {
 
   return (
     <motion.div
-      ref={ref}
       className="performance relative flex h-full flex-1 items-center justify-center overflow-hidden border-r border-system-foreground p-10"
       style={{ background }}
     >
-      <div className="mx-auto flex w-[250px] items-center justify-center">
+      <div className="mx-auto flex w-[150px] items-center justify-center lg:w-[250px]">
         <div className="relative w-full overflow-hidden pt-[217%]">
           <div className="mask-test absolute inset-0 h-full w-full">
             <div className="bg-night-background relative h-full w-full">
