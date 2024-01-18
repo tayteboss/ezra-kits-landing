@@ -185,6 +185,21 @@
     --lilac-border: #f5efd8;
   }
 
+  .performance {
+		-webkit-transform: translateZ(0);
+		backface-visibility: hidden;
+		perspective: 1000;
+		transform: translate3d(0,0,0);
+		transform: translateZ(0);
+	}
+
+  .mask-test {
+    mask: url("/icons/phone-mask.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+
   html,
   body {
     background: var(--system-foreground);
@@ -389,14 +404,13 @@
 }
 
 .rich-text p:not(:last-child) {
-  margin-bottom: 1rem;
+  margin-bottom: 3px;
 }
 
 .rich-text p,
 .rich-text {
-  font-size: 22px;
-  line-height: 35px;
-  line-height: 1.4;
+  font-size: 5px;
+  line-height: 1.3;
 }
 
 /* rich text media query for max 1000px */
@@ -404,8 +418,8 @@
 @media (max-width: 1000px) {
   .rich-text p,
   .rich-text {
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 5px;
+    line-height: 1.3;
   }
 }
 
