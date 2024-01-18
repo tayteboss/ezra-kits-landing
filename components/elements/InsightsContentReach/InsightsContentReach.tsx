@@ -15,22 +15,22 @@ const InsightsContentReach = (props: Props) => {
   });
 
   return (
-    <div className="flex flex-col gap-6" ref={ref}>
-      <div className="flex w-full flex-col gap-3">
+    <div className="flex flex-col gap-4" ref={ref}>
+      <div className="flex w-full flex-col gap-2">
         {data.map((item, i) => (
           <ContentReachBar data={item} key={i} inView={inView} />
         ))}
       </div>
       <div className="flex gap-4">
         <div className="flex items-center gap-1">
-          <div className="h-[12px] w-[12px] rounded-full bg-secondary" />
-          <p className="secondary-font colour-animation text-[12px] text-secondary">
+          <div className="h-[12px] w-[12px] rounded-full bg-system-secondary" />
+          <p className="font-twkLausanne450 text-[10px] text-system-foreground">
             Followers
           </p>
         </div>
         <div className="flex items-center gap-1">
-          <div className="h-[12px] w-[12px] rounded-full bg-foreground" />
-          <p className="secondary-font colour-animation text-[12px] text-secondary">
+          <div className="h-[12px] w-[12px] rounded-full bg-system-foreground" />
+          <p className="font-twkLausanne450 text-[10px] text-system-foreground">
             Non-followers
           </p>
         </div>

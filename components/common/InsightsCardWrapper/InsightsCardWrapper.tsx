@@ -31,11 +31,9 @@ const InsightsCardWrapper = (props: Props) => {
   const { children, type = "performance", rounded = false } = props;
 
   return (
-    <motion.div className={`${type}-card h-[45px]`} variants={wrapperVariants}>
+    <motion.div className={`${type}-card h-[220px]`} variants={wrapperVariants}>
       <div
-        className={`colour-animation flex h-full flex-col justify-between bg-card p-[2px] ${
-          !rounded ? "rounded-none" : "rounded-xl"
-        }`}
+        className={`flex h-full flex-col justify-between rounded-[4px] bg-[#FAFAFA] p-3`}
       >
         {children}
       </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 type Props = {
@@ -7,6 +8,23 @@ type Props = {
   statOnePercentage: number;
   statTwoTitle: string;
   statTwoPercentage: number;
+};
+
+const wrapperVariants = {
+  hidden: {
+    opacity: 0,
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut",
+    },
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut",
+    },
+  },
 };
 
 const InsightsCardPercentageOrder = (props: Props) => {
@@ -42,25 +60,38 @@ const InsightsCardPercentageOrder = (props: Props) => {
   }, [statOnePercentage, statTwoPercentage, statOneTitle, statTwoTitle]);
 
   return (
-    <div className="items-left flex flex-col justify-between gap-5">
-      {statistics.map((stat, i) => (
-        <span
-          key={`${stat.percentage}-${i}`}
-          className={`secondary-font colour-animation text-[34px] font-light leading-[0] lg:text-[38px] ${
-            i === statistics.length - 1 ? "text-secondary" : "text-foreground"
-          }`}
-        >
-          {stat.title} {stat.percentage}
+    <AnimatePresence mode="wait">
+      <motion.div
+        variants={wrapperVariants}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+        className="items-left flex flex-col justify-between gap-1"
+        key={statOnePercentage}
+      >
+        {statistics.map((stat, i) => (
           <span
-            className={`secondary-font colour-animation text-2xl ${
-              i === statistics.length - 1 ? "text-secondary" : "text-foreground"
+            key={`${stat.percentage}-${i}`}
+            className={`font-twkLausanne450 text-[26px] font-light leading-[1] lg:text-[34px] ${
+              i === statistics.length - 1
+                ? "text-system-secondary"
+                : "text-system-foreground"
             }`}
           >
-            %
+            {stat.title} {stat.percentage}
+            <span
+              className={`font-twkLausanne450 text-[20px] ${
+                i === statistics.length - 1
+                  ? "text-system-secondary"
+                  : "text-system-foreground"
+              }`}
+            >
+              %
+            </span>
           </span>
-        </span>
-      ))}
-    </div>
+        ))}
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

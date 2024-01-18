@@ -15,9 +15,9 @@ const AgeRangeBar = (props: Props) => {
 
   useEffect(() => {
     if (isHighest) {
-      setBackground("var(--sky-foreground)");
+      setBackground("var(--white-foreground)");
     } else {
-      setBackground("var(--sky-secondary)");
+      setBackground("var(--white-secondary)");
     }
   }, [isHighest]);
 
@@ -30,12 +30,12 @@ const AgeRangeBar = (props: Props) => {
   }, [percentage]);
 
   return (
-    <div className="flex h-full w-[15%] flex-col items-center justify-end">
-      <span className="secondary-font colour-animation mb-[1px] whitespace-pre text-center text-[3px] text-secondary">
+    <div className="flex h-full w-[20%] flex-col items-center justify-end">
+      <span className="mb-1 whitespace-pre text-center font-twkLausanne450 text-[8px] text-system-foreground">
         {`${percentage}%`}
       </span>
       <div
-        className="colour-animation w-full duration-500"
+        className="w-full duration-500"
         style={{
           height,
           background,

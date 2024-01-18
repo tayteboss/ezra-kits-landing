@@ -7,10 +7,14 @@ type Props = {
   rounded?: boolean;
   isActive: boolean;
   type?: WrapperType;
+  data: {
+    female: number;
+    male: number;
+  };
 };
 
 const InsightsGenderCard = (props: Props) => {
-  const { rounded, type, isActive } = props;
+  const { rounded, type, isActive, data } = props;
 
   return (
     <>
@@ -19,9 +23,9 @@ const InsightsGenderCard = (props: Props) => {
           <InsightsCardTitle title="Gender" />
           <InsightsCardPercentageOrder
             statOneTitle="Female"
-            statOnePercentage={60}
+            statOnePercentage={data.female}
             statTwoTitle="Male"
-            statTwoPercentage={40}
+            statTwoPercentage={data.male}
           />
         </InsightsCardWrapper>
       )}

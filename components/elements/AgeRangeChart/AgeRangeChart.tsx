@@ -15,11 +15,11 @@ const AgeRangeChart = (props: all) => {
   });
 
   const spanStyling =
-    "secondary-font colour-animation flex w-[6px] justify-center whitespace-pre text-center text-center text-[3px] text-foreground";
+    "font-twkLausanne450 colour-animation flex w-[6px] justify-center whitespace-pre text-center text-center text-[10px] text-foreground";
 
   return (
     <div className="flex h-full flex-col" ref={ref}>
-      <div className="flex h-full justify-between gap-[10%] px-1">
+      <div className="flex h-full justify-between gap-[10%] px-3">
         {hasData &&
           data.map((item, i) => {
             return (
@@ -31,7 +31,7 @@ const AgeRangeChart = (props: all) => {
             );
           })}
       </div>
-      <div className="colour-animation mb-[2px] h-[1px] w-full bg-secondary opacity-25" />
+      <div className="colour-animation mb-2 h-[1px] w-full bg-system-card opacity-25" />
       <div className="flex w-full justify-around">
         <span className={spanStyling}>13-17</span>
         <span className={spanStyling}>18-24</span>

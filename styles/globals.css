@@ -451,41 +451,26 @@
   grid-column: span 3;
 }
 
-.performance-card:nth-child(1),
-.performance-card:nth-child(2),
-.performance-card:nth-child(3) {
+.performance-card:nth-child(5),
+.performance-card:nth-child(6),
+.performance-card:nth-child(7) {
   grid-column: span 4;
 }
 
 @media (max-width: 1360px) {
-  .performance-card,
-  .audience-card {
-    grid-column: span 4;
-  }
 
-  .performance-card:nth-child(1),
-  .performance-card:nth-child(2),
-  .audience-card:nth-child(1),
-  .audience-card:nth-child(2) {
-    grid-column: span 6;
-  }
 }
 
-@media (max-width: 640px) {
-  .performance-card,
-  .audience-card {
-    grid-column: 1 / -1;
-  }
+@media (max-width: 700px) {
 
   .performance-card:nth-child(1),
   .performance-card:nth-child(2),
   .performance-card:nth-child(3),
   .performance-card:nth-child(4),
-  .audience-card:nth-child(1),
-  .audience-card:nth-child(2),
-  .audience-card:nth-child(3),
-  .audience-card:nth-child(4) {
-    grid-column: 1 / -1;
+  .performance-card:nth-child(5),
+  .performance-card:nth-child(6),
+  .performance-card:nth-child(7) {
+    grid-column: span 6;
   }
 }
 

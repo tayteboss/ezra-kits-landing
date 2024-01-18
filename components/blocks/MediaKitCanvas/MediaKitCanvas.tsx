@@ -9,21 +9,21 @@ const wrapperVariants = {
   hidden: {
     opacity: 0,
     transition: {
-      duration: 0.3,
+      duration: 0.5,
       ease: "easeInOut",
     },
   },
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.3,
+      duration: 0.5,
       ease: "easeInOut",
     },
   },
 };
 
 const MediaKitCanvas = () => {
-  const [activeColour, setActiveColour] = useState("lilac");
+  const [activeColour, setActiveColour] = useState("scarlet");
   const [activeFontStyle, setActiveFontStyle] = useState("Functional");
   const [font, setFont] = useState("twkLausanne450");
 
@@ -90,7 +90,7 @@ const MediaKitCanvas = () => {
               )}
               {font && (
                 <motion.span
-                  className={`font-${font} whitespace-nowrap text-right duration-500`}
+                  className={`whitespace-nowrap text-right font-twkLausanne450 duration-500`}
                   style={{ color: `var(--${activeColour}-foreground)` }}
                   key={`${font}-1`}
                   variants={wrapperVariants}
