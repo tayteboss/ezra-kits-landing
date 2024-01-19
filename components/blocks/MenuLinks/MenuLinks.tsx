@@ -58,7 +58,7 @@ const MenuLinks = (props: Props) => {
           initial="hidden"
           animate="visible"
           exit="hidden"
-          className="flex gap-3"
+          className="flex hidden gap-3 md:block"
         >
           <motion.a
             variants={childVariants}

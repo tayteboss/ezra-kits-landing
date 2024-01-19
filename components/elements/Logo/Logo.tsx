@@ -25,7 +25,7 @@ const Logo = (props: Props) => {
   const { isActive } = props;
 
   return (
-    <div>
+    <div className="z-10">
       <AnimatePresence>
         {isActive && (
           <motion.div

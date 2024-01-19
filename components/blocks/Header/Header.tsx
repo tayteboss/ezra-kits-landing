@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import useScrolled from "@/hooks/useScrolled";
 import useScrollDirection from "@/hooks/useScrollDirection";
 import { AnimatePresence, motion } from "framer-motion";
+import MenuTrigger from "@/components/elements/MenuTrigger";
+import Menu from "../Menu";
 
 const wrapperVariants = {
   hidden: {
@@ -27,6 +29,7 @@ const wrapperVariants = {
 const Header = () => {
   const [bgIsActive, setBgIsActive] = useState(false);
   const [menuIsActive, setMenuIsActive] = useState(false);
+  const [mobileMenuIsActive, setMobileMenuIsActive] = useState(false);
 
   const hasScrolled = useScrolled({ amount: 500 });
   const scrollDirection = useScrollDirection();
@@ -66,10 +69,22 @@ const Header = () => {
         <PageLayout>
           <div className="flex justify-between">
             <Logo isActive={hasScrolled} />
-            <div className="flex items-center gap-4">
+            <div className="z-10 flex items-center gap-4">
               <MenuLinks isActive={menuIsActive} />
-              <LoginButton />
+              <div className="hidden md:block">
+                <LoginButton />
+              </div>
+              <div className="z-10 md:hidden">
+                <MenuTrigger
+                  mobileMenuIsActive={mobileMenuIsActive}
+                  setMobileMenuIsActive={setMobileMenuIsActive}
+                />
+              </div>
             </div>
+            <Menu
+              isActive={mobileMenuIsActive}
+              setMobileMenuIsActive={setMobileMenuIsActive}
+            />
           </div>
         </PageLayout>
       </div>
