@@ -37,6 +37,7 @@ const HeroCell = (props: Props) => {
     <div
       className={`${borderStyles} col-span-1 flex flex-col justify-between p-5 duration-250`}
       onMouseOut={() => handleColourChange()}
+      onFocus={() => handleColourChange()}
       style={{ background: `var(--${colour}-background)` }}
     >
       <p

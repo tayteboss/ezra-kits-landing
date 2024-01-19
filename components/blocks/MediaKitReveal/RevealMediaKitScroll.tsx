@@ -49,7 +49,7 @@ const RevealMediaKitScroll = (props) => {
       className="performance relative flex h-full w-full flex-1 items-center justify-center overflow-hidden border-r border-system-foreground lg:w-[50%]"
       style={{ background }}
     >
-      <div className="mx-auto flex w-[150px] items-center justify-center lg:w-[250px]">
+      <div className="mx-auto flex w-[125px] items-center justify-center md:w-[150px] lg:w-[250px]">
         <div className="relative w-full overflow-hidden pt-[217%]">
           <div className="mask-test absolute inset-0 h-full w-full">
             <div className="bg-night-background relative h-full w-full">
